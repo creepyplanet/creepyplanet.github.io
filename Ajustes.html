@@ -15,20 +15,94 @@
       </ul>
     </nav>
   </header>
-
     <section id="contacto" class="section">
       <div class="content">
-        <h2>Contacto</h2>
-        <p>¡Contáctanos para más información!</p>
-        <form id="contact-form">
-          <input type="text" placeholder="Nombre" required>
-          <input type="email" placeholder="Correo Electrónico" required>
-          <textarea placeholder="Mensaje" required></textarea>
-          <button type="submit">Enviar</button>
         </form>
       </div>
     </section>
   </main>
+  </head>
+  <body>
+    
+
+  <h1>Ajustes Generales</h1>
+ 
+
+  <section>
+    <h2>Información de Usuario</h2>
+    <label for="userName">Nombre de Usuario:</label>
+    <input type="text" id="userName" placeholder="Introduce tu nombre de usuario">
+  
+    <label for="userEmail">Correo Electrónico:</label>
+    <input type="email" id="userEmail" placeholder="Introduce tu correo electrónico">
+  </section>
+
+  <section>
+    <h2>Preferencias de Notificación</h2>
+    <label for="emailNotifications">Notificaciones por Correo Electrónico:</label>
+    <select id="emailNotifications">
+      <option value="enabled">Habilitadas</option>
+      <option value="disabled">Deshabilitadas</option>
+    </select>
+  </section>
+
+  <section>
+    <h2>Preferencias de Tema</h2>
+    <label for="theme">Tema:</label>
+    <select id="theme">
+      <option value="light">Claro</option>
+      <option value="dark">Oscuro</option>
+    </select>
+  </section>
+
+  <button onclick="guardarAjustes()">Guardar Ajustes</button>
+  
+  <section id="contacto" class="section">
+    <div class="content">
+      <h2>Contacto</h2>
+      <p>¡Contáctanos para más información!</p>
+      <form id="contact-form">
+        <input type="text" placeholder="Nombre" required>
+        <input type="email" placeholder="Correo Electrónico" required>
+        <textarea placeholder="Mensaje" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </section> 
+
+  <footer>
+    <p>Desarrollado por [Javier] | © 2024</p>
+  </footer>
+
+  <script>
+    // Función para guardar los ajustes
+    function guardarAjustes() {
+      var userName = document.getElementById('userName').value;
+      var userEmail = document.getElementById('userEmail').value;
+      var emailNotifications = document.getElementById('emailNotifications').value;
+      var theme = document.getElementById('theme').value;
+  
+      // Almacenar ajustes en localStorage
+      localStorage.setItem('userName', userName);
+      localStorage.setItem('userEmail', userEmail);
+      localStorage.setItem('emailNotifications', emailNotifications);
+      localStorage.setItem('theme', theme);
+  
+      // Mostrar mensaje de éxito
+      alert('Ajustes guardados correctamente');
+    }
+  
+    // Cargar ajustes almacenados al cargar la página
+    window.onload = function() {
+      document.getElementById('userName').value = localStorage.getItem('userName') || '';
+      document.getElementById('userEmail').value = localStorage.getItem('userEmail') || '';
+      document.getElementById('emailNotifications').value = localStorage.getItem('emailNotifications') || 'enabled';
+      document.getElementById('theme').value = localStorage.getItem('theme') || 'light';
+    };
+  </script>
+  
+  </body>
+  </html>
 
   <script src="app.js"></script>
 </body>
