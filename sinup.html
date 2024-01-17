@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrar</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    input {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    <form id="signupForm">
+      <h2>Signup</h2>
+      <label for="signupUsername">Username:</label>
+      <input type="text" id="signupUsername" required>
+      <label for="signupEmail">Email:</label>
+      <input type="email" id="signupEmail" required>
+      <label for="signupPassword">Password:</label>
+      <input type="password" id="signupPassword" required>
+      <button type="button" onclick="signup()">Signup</button>
+    </form>
+  </div>
+
+  <script>
+    function signup() {
+      var username = document.getElementById('signupUsername').value;
+      var email = document.getElementById('signupEmail').value;
+      var password = document.getElementById('signupPassword').value;
+
+      // Simulación de lógica de registro
+      var newUser = {
+        username: username,
+        email: email,
+        password: password
+      };
+
+      localStorage.setItem(username, JSON.stringify(newUser));
+      alert('Signup successful');
+      window.location.href = 'index.html'; // Redirección a index.html
+    }
+  </script>
+
+</body>
+</html>
