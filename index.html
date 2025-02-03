@@ -1,73 +1,79 @@
 <!DOCTYPE html>
 <html lang="es">
-    <!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Bienvenido - CreepyPlanet</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header>
-    <nav>
-      <ul>
-
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#servicios">Proyectos</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-        <li><a href="Ajustes.html" class="option">Ajustes</a></li>
-        <li><a href="login.html" class="option">Inicio sesión</a></li>
-        <li><a href="sinup.html" class="option">Registrarse</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <section id="inicio" class="section">
-      <div class="content">
-        <h1>Bienvenido a CreepyPlanet</h1>
-        <p>¡Descubre nuestros increíbles proyectos!</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ESSENCE - Moda Contemporánea</title>
+    <meta name="description" content="Descubre la nueva colección de moda contemporánea" />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>ESSENCE <span class="glow">2024</span></h1>
+        <p>Donde el estilo encuentra su esencia</p>
+        <div class="date-container">
+          <span class="star">★</span>
+          <span>Nueva Colección</span>
+          <span class="star">★</span>
+        </div>
+        <button class="cta-button">Descubre más</button>
       </div>
     </section>
 
-    <section id="servicios" class="section">
-      <div class="content">
-        <h2>Nuestros Proyectos</h2>
-          <p>Nuestro Primer Proyecto de este año es Alone un juego de miedo ambientado en una casa en mitad del bosque...</p>
-          <p>Aquí os voy a dejar un enlace a la tienda donde podreis obtener el juego y disfrutarlo. <a href="juego.html"  class="option"> <button>Pincha Aquí</button> </a></p>
-          <p>Aquí os voy a dejar un enlace a el  discord de la comunidad comentadme vuestras ideas y comentarios sobre el juego. <a href="https://discord.gg/C5RjZW2H"  class="option"> <button>Pincha Aquí</button> </a></p>
+    <!-- Collection Section -->
+    <section class="artists">
+      <div class="container">
+        <div class="section-header">
+          <span class="icon">✨</span>
+          <h2>Colección Destacada</h2>
         </div>
+        <div class="artists-grid">
+          <div class="artist-card">
+            <div class="artist-overlay"></div>
+            <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b" alt="Ropa Casual">
+            <div class="artist-info">
+              <h3>Casual Chic</h3>
+              <p>Colección Primavera</p>
+            </div>
+          </div>
+          <div class="artist-card">
+            <div class="artist-overlay"></div>
+            <img src="https://images.unsplash.com/photo-1445205170230-053b83016050" alt="Ropa Elegante">
+            <div class="artist-info">
+              <h3>Elegancia Natural</h3>
+              <p>Colección Verano</p>
+            </div>
+          </div>
+          <div class="artist-card">
+            <div class="artist-overlay"></div>
+            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d" alt="Ropa Urbana">
+            <div class="artist-info">
+              <h3>Urban Style</h3>
+              <p>Colección Otoño</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="contacto" class="section">
-      <div class="content">
-        <h2>Contacto</h2>
-        <p>¡Contáctanos para más información!</p>
-        <form id="contact-form">
-          <input type="text" placeholder="Nombre" required>
-          <input type="email" placeholder="Correo Electrónico" required>
-          <textarea placeholder="Mensaje" required></textarea>
-          <button type="submit">Enviar</button>
+    <!-- Contact Section -->
+    <section class="contact">
+      <div class="container">
+        <h2>Únete a nuestra comunidad</h2>
+        <p>Suscríbete para recibir las últimas tendencias, descuentos exclusivos y más</p>
+        <form id="newsletter-form">
+          <div class="form-group">
+            <input type="email" id="email" placeholder="Tu email" required>
+            <button type="submit">Suscribirse</button>
+          </div>
         </form>
       </div>
     </section>
-  </main>
 
-  <footer>
-    <p>Desarrollado por [Javier] | © 2024<div class="container1">
-      <a class="discord-link" href="https://discord.gg/C5RjZW2H" target="_blank">
-          <img src="C:\Users\fjmor\Desktop\compañia\1.png" alt="Discord">
-      </a>
-    </div>
-    <div class="container2">
-      <a class="discord-link" href="https://discord.gg/C5RjZW2H" target="_blank">
-          <img src="C:\Users\fjmor\Desktop\compañia\2.jpg" alt="Discord">
-      </a>
-    </div></p>
-
-  </footer>
-
-
-  <script src="app.js"></script>
-</body>
+    <div id="toast" class="toast"></div>
+    <script src="script.js"></script>
+  </body>
 </html>
