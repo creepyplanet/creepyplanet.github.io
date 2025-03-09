@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reducing Debt - Financial Tips</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; }
+        header { background-color: #000000; color: white; text-align: center; padding: 20px; }
+        .content { width: 80%; margin: 20px auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); }
+        img { width: 100%; border-radius: 8px; }
+        .back-button { display: block; margin-top: 20px; text-align: center; color: #fff; background: #b71c1c; padding: 10px; text-decoration: none; border-radius: 5px; }
+        .back-button:hover { background: #880e4f; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>How to Reduce Your Debt</h1>
+        <a href="index.html" class="back-button">⬅ Back to Home</a>
+    </header>
+
+    <section class="content">
+        <img src="debtreduction.jpg" alt="Debt Reduction Illustration">
+        <p>Reducing debt improves your financial health and credit score...</p>
+        <h2>Key Strategies</h2>
+        <ul>
+            <li>Pay off high-interest debts first.</li>
+            <li>Use the snowball or avalanche method.</li>
+            <li>Negotiate lower interest rates with creditors.</li>
+            <li>Avoid accumulating new debts.</li>
+        </ul>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let items = document.querySelectorAll("li");
+            items.forEach((item, index) => {
+                item.style.opacity = "0";
+                setTimeout(() => { item.style.opacity = "1"; item.style.transition = "opacity 1s"; }, index * 300);
+            });
+        });
+    </script>
+</body>
+</html>

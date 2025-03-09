@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Tips</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f1f1;
+            color: #333;
+            text-align: center;
+        }
+        header {
+            background: #222;
+            color: white;
+            padding: 50px 20px;
+            font-size: 1.8rem;
+            font-weight: bold;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .intro {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: auto;
+            animation: slideUp 1s ease-in-out;
+        }
+        .intro img {
+            width: 100%;
+            max-height: 450px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .tips {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 50px 20px;
+            max-width: 1400px;
+            margin: auto;
+        }
+        .tip {
+            background: white;
+            margin: 20px;
+            padding: 30px;
+            width: 400px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+            text-align: left;
+        }
+        .tip:hover {
+            transform: scale(1.05);
+        }
+        .tip img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        .tip a {
+            display: block;
+            margin-top: 10px;
+            color: #444;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer {
+            background: #222;
+            color: white;
+            padding: 20px;
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+        footer a {
+            color: #ccc;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Smart Financial Tips</h1>
+        <p>Your guide to financial success</p>
+    </header>
+    
+    <section class="intro">
+        <img src="finance-definition.jpg" alt="Finance Image">
+        <p>Managing your finances wisely is key to achieving your financial goals. Here are some expert tips to help you on your journey.</p>
+    </section>
+    
+    <section class="tips">
+        <div class="tip">
+            <img src="imagen1.jpg" alt="Budget Planning">
+            <h2>1. Create a Budget</h2>
+            <p>Track your income and expenses to understand where your money is going.</p>
+            <a href="budget.html">Learn More</a>
+        </div>
+        <div class="tip">
+            <img src="images (4).jpeg" alt="Save Money">
+            <h2>2. Save Regularly</h2>
+            <p>Set aside a portion of your income each month for savings and investments.</p>
+            <a href="savings.html">Learn More</a>
+        </div>
+        <div class="tip">
+            <img src="debt.png" alt="Debt Management">
+            <h2>3. Reduce Debt</h2>
+            <p>Pay off high-interest debts first and avoid unnecessary loans.</p>
+            <a href="debt.html">Learn More</a>
+        </div>
+        <div class="tip">
+            <img src="imagen2.jpeg" alt="Invest Wisely">
+            <h2>4. Invest Wisely</h2>
+            <p>Diversify your investments to reduce risk and increase long-term gains.</p>
+            <a href="investing.html">Learn More</a>
+        </div>
+        <div class="tip">
+            <img src="images (5).jpeg" alt="Emergency Fund">
+            <h2>5. Build an Emergency Fund</h2>
+            <p>Having at least three to six months' worth of expenses saved can protect you during financial hardships.</p>
+            <a href="emergency.html">Learn More</a>
+        </div>
+    </section>
+    
+    <footer>
+        <p>© 2025 Financial Tips. All rights reserved.</p>
+        <p><a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-and-conditions.html">Terms and Conditions</a></p>
+    </footer>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const tips = document.querySelectorAll(".tip");
+            tips.forEach((tip, index) => {
+                tip.style.animation = `fadeIn 0.8s ease-in-out ${index * 0.2}s both`;
+            });
+        });
+    </script>
+</body>
+</html>
